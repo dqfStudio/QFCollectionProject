@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15507543206DD202008BD729 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507542206DD202008BD729 /* AppDelegate.m */; };
+		15507546206DD202008BD729 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507545206DD202008BD729 /* ViewController.m */; };
+		15507549206DD202008BD729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15507547206DD202008BD729 /* Main.storyboard */; };
+		1550754B206DD202008BD729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1550754A206DD202008BD729 /* Assets.xcassets */; };
+		1550754E206DD202008BD729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1550754C206DD202008BD729 /* LaunchScreen.storyboard */; };
+		15507551206DD202008BD729 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507550206DD202008BD729 /* main.m */; };
+		15507582206E4BB4008BD729 /* QFBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507573206E4BB4008BD729 /* QFBaseItem.m */; };
+		15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507576206E4BB4008BD729 /* NSObject+selector.m */; };
+		15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507579206E4BB4008BD729 /* QFGroupModel.m */; };
+		15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757A206E4BB4008BD729 /* QFCollectionModel.m */; };
+		15507586206E4BB4008BD729 /* QFItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757B206E4BB4008BD729 /* QFItemModel.m */; };
+		15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507580206E4BB4008BD729 /* QFCollectionView.m */; };
+		15CCD9A5208033D4000920A9 /* QFTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCD9A4208033D4000920A9 /* QFTestItem.m */; };
+		15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */; };
+		292B8183646537DFF9DE3313 /* libPods-QFCollectionProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0556455C944519D43F5AA391 /* libPods-QFCollectionProject.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0556455C944519D43F5AA391 /* libPods-QFCollectionProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QFCollectionProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12AA15E7FDB36E673B8DBB2E /* Pods-QFCollectionProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFCollectionProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject.release.xcconfig"; sourceTree = "<group>"; };
+		1550753E206DD202008BD729 /* QFCollectionProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QFCollectionProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15507541206DD202008BD729 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15507542206DD202008BD729 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15507544206DD202008BD729 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		15507545206DD202008BD729 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15507548206DD202008BD729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1550754A206DD202008BD729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1550754D206DD202008BD729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1550754F206DD202008BD729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15507550206DD202008BD729 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15507573206E4BB4008BD729 /* QFBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFBaseItem.m; sourceTree = "<group>"; };
+		15507574206E4BB4008BD729 /* QFBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFBaseItem.h; sourceTree = "<group>"; };
+		15507576206E4BB4008BD729 /* NSObject+selector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+selector.m"; sourceTree = "<group>"; };
+		15507577206E4BB4008BD729 /* NSObject+selector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+selector.h"; sourceTree = "<group>"; };
+		15507579206E4BB4008BD729 /* QFGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFGroupModel.m; sourceTree = "<group>"; };
+		1550757A206E4BB4008BD729 /* QFCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCollectionModel.m; sourceTree = "<group>"; };
+		1550757B206E4BB4008BD729 /* QFItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFItemModel.m; sourceTree = "<group>"; };
+		1550757C206E4BB4008BD729 /* QFCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCollectionModel.h; sourceTree = "<group>"; };
+		1550757D206E4BB4008BD729 /* QFGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFGroupModel.h; sourceTree = "<group>"; };
+		1550757E206E4BB4008BD729 /* QFItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFItemModel.h; sourceTree = "<group>"; };
+		15507580206E4BB4008BD729 /* QFCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCollectionView.m; sourceTree = "<group>"; };
+		15507581206E4BB4008BD729 /* QFCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCollectionView.h; sourceTree = "<group>"; };
+		15CCD9A3208033D4000920A9 /* QFTestItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFTestItem.h; sourceTree = "<group>"; };
+		15CCD9A4208033D4000920A9 /* QFTestItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFTestItem.m; sourceTree = "<group>"; };
+		15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		15CCD9AA20805507000920A9 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		C36A0B746D9A0A1421BD340A /* Pods-QFCollectionProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFCollectionProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1550753B206DD202008BD729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292B8183646537DFF9DE3313 /* libPods-QFCollectionProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15507535206DD202008BD729 = {
+			isa = PBXGroup;
+			children = (
+				15507540206DD202008BD729 /* QFCollectionProject */,
+				1550753F206DD202008BD729 /* Products */,
+				21FE4F61586A13D22848D476 /* Pods */,
+				AA06DF53270F92BBF18D4E23 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1550753F206DD202008BD729 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1550753E206DD202008BD729 /* QFCollectionProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15507540206DD202008BD729 /* QFCollectionProject */ = {
+			isa = PBXGroup;
+			children = (
+				15507570206E4BB4008BD729 /* QFCollection */,
+				15507541206DD202008BD729 /* AppDelegate.h */,
+				15507542206DD202008BD729 /* AppDelegate.m */,
+				15507544206DD202008BD729 /* ViewController.h */,
+				15507545206DD202008BD729 /* ViewController.m */,
+				15507547206DD202008BD729 /* Main.storyboard */,
+				1550754A206DD202008BD729 /* Assets.xcassets */,
+				1550754C206DD202008BD729 /* LaunchScreen.storyboard */,
+				1550754F206DD202008BD729 /* Info.plist */,
+				15507550206DD202008BD729 /* main.m */,
+			);
+			path = QFCollectionProject;
+			sourceTree = "<group>";
+		};
+		15507570206E4BB4008BD729 /* QFCollection */ = {
+			isa = PBXGroup;
+			children = (
+				15507571206E4BB4008BD729 /* Tools */,
+				15507575206E4BB4008BD729 /* NSObject+selector */,
+				15507578206E4BB4008BD729 /* Model */,
+				1550757F206E4BB4008BD729 /* View */,
+			);
+			path = QFCollection;
+			sourceTree = "<group>";
+		};
+		15507571206E4BB4008BD729 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				15507572206E4BB4008BD729 /* Cells */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		15507572206E4BB4008BD729 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				15507574206E4BB4008BD729 /* QFBaseItem.h */,
+				15507573206E4BB4008BD729 /* QFBaseItem.m */,
+				15CCD9A3208033D4000920A9 /* QFTestItem.h */,
+				15CCD9A4208033D4000920A9 /* QFTestItem.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		15507575206E4BB4008BD729 /* NSObject+selector */ = {
+			isa = PBXGroup;
+			children = (
+				15507576206E4BB4008BD729 /* NSObject+selector.m */,
+				15507577206E4BB4008BD729 /* NSObject+selector.h */,
+			);
+			path = "NSObject+selector";
+			sourceTree = "<group>";
+		};
+		15507578206E4BB4008BD729 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1550757C206E4BB4008BD729 /* QFCollectionModel.h */,
+				1550757A206E4BB4008BD729 /* QFCollectionModel.m */,
+				1550757D206E4BB4008BD729 /* QFGroupModel.h */,
+				15507579206E4BB4008BD729 /* QFGroupModel.m */,
+				1550757E206E4BB4008BD729 /* QFItemModel.h */,
+				1550757B206E4BB4008BD729 /* QFItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1550757F206E4BB4008BD729 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15CCD9AA20805507000920A9 /* UICollectionViewLeftAlignedLayout.h */,
+				15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */,
+				15507581206E4BB4008BD729 /* QFCollectionView.h */,
+				15507580206E4BB4008BD729 /* QFCollectionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21FE4F61586A13D22848D476 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C36A0B746D9A0A1421BD340A /* Pods-QFCollectionProject.debug.xcconfig */,
+				12AA15E7FDB36E673B8DBB2E /* Pods-QFCollectionProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA06DF53270F92BBF18D4E23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0556455C944519D43F5AA391 /* libPods-QFCollectionProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1550753D206DD202008BD729 /* QFCollectionProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15507554206DD202008BD729 /* Build configuration list for PBXNativeTarget "QFCollectionProject" */;
+			buildPhases = (
+				AB3D6FF50EDD9BA6E02DD39F /* [CP] Check Pods Manifest.lock */,
+				1550753A206DD202008BD729 /* Sources */,
+				1550753B206DD202008BD729 /* Frameworks */,
+				1550753C206DD202008BD729 /* Resources */,
+				D0CFAE48C42153C08F658CF9 /* [CP] Embed Pods Frameworks */,
+				ED005EA6A7C63A4511F84BD7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QFCollectionProject;
+			productName = QFCollectionProject;
+			productReference = 1550753E206DD202008BD729 /* QFCollectionProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15507536206DD202008BD729 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = dqfStudio;
+				TargetAttributes = {
+					1550753D206DD202008BD729 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 15507539206DD202008BD729 /* Build configuration list for PBXProject "QFCollectionProject" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15507535206DD202008BD729;
+			productRefGroup = 1550753F206DD202008BD729 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1550753D206DD202008BD729 /* QFCollectionProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1550753C206DD202008BD729 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1550754E206DD202008BD729 /* LaunchScreen.storyboard in Resources */,
+				1550754B206DD202008BD729 /* Assets.xcassets in Resources */,
+				15507549206DD202008BD729 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB3D6FF50EDD9BA6E02DD39F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QFCollectionProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CFAE48C42153C08F658CF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED005EA6A7C63A4511F84BD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1550753A206DD202008BD729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */,
+				15507582206E4BB4008BD729 /* QFBaseItem.m in Sources */,
+				15507546206DD202008BD729 /* ViewController.m in Sources */,
+				15CCD9A5208033D4000920A9 /* QFTestItem.m in Sources */,
+				15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */,
+				15507551206DD202008BD729 /* main.m in Sources */,
+				15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */,
+				15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */,
+				15507543206DD202008BD729 /* AppDelegate.m in Sources */,
+				15507586206E4BB4008BD729 /* QFItemModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15507547206DD202008BD729 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15507548206DD202008BD729 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1550754C206DD202008BD729 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1550754D206DD202008BD729 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15507552206DD202008BD729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		15507553206DD202008BD729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15507555206DD202008BD729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C36A0B746D9A0A1421BD340A /* Pods-QFCollectionProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q65W64YB94;
+				INFOPLIST_FILE = QFCollectionProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqfStudio.QFCollectionProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15507556206DD202008BD729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12AA15E7FDB36E673B8DBB2E /* Pods-QFCollectionProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q65W64YB94;
+				INFOPLIST_FILE = QFCollectionProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dqfStudio.QFCollectionProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15507539206DD202008BD729 /* Build configuration list for PBXProject "QFCollectionProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15507552206DD202008BD729 /* Debug */,
+				15507553206DD202008BD729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15507554206DD202008BD729 /* Build configuration list for PBXNativeTarget "QFCollectionProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15507555206DD202008BD729 /* Debug */,
+				15507556206DD202008BD729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15507536206DD202008BD729 /* Project object */;
+}

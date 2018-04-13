@@ -130,9 +130,8 @@
     }
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-//    QFGroupModel *groupModel = [self groupModelAtSection:section];
-//    return groupModel.rowInterval;
-    return 0.f;
+    QFGroupModel *groupModel = [self groupModelAtSection:section];
+    return groupModel.rowInterval;
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     QFGroupModel *groupModel = [self groupModelAtSection:section];
@@ -140,8 +139,7 @@
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     QFGroupModel *groupModel = [self groupModelAtSection:section];
-//    return UIEdgeInsetsMake(groupModel.marginTop, groupModel.marginX, 0, groupModel.marginX);
-    return UIEdgeInsetsMake(groupModel.rowInterval, groupModel.marginX, 0, groupModel.marginX);
+    return UIEdgeInsetsMake(groupModel.marginTop, groupModel.marginX, 0, groupModel.marginX);
 }
 
 @end

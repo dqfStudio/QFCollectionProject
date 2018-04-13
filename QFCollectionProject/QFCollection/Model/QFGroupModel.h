@@ -16,7 +16,7 @@ typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, UICollectionView *col
 @property (nonatomic, assign) CGFloat rowInterval;  // optional
 @property (nonatomic, assign) CGFloat colInterval;  // optional
 @property (nonatomic, assign) CGFloat marginX;      // optional
-//@property (nonatomic, assign) CGFloat marginTop;    // optional
+@property (nonatomic, assign) CGFloat marginTop;    // optional
 
 @property (nonatomic, copy) QFHeaderViewSizeBlock headerSizeBlock;            // optional
 

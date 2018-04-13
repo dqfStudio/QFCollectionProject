@@ -31,6 +31,12 @@
     NSArray *arr = @[@"groupModel<0>itemModel",
                      @"groupModel<0>itemModel",
                      @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
+                     @"groupModel<0>itemModel",
                      @"groupModel2<1>itemModel2"];
 
 
@@ -42,8 +48,9 @@
 - (void)groupModel:(id)sender {
     QFGroupModel *sectionModel = sender;
     sectionModel.marginX = 10;
-    sectionModel.rowInterval = 22;
+    sectionModel.rowInterval = 10;
     sectionModel.colInterval = 10;
+    sectionModel.marginTop = 22;
 }
 
 - (void)groupModel2:(id)sender {
@@ -51,6 +58,7 @@
     sectionModel.marginX = 10;
     sectionModel.rowInterval = 10;
     sectionModel.colInterval = 10;
+    sectionModel.marginTop = 10;
 }
 
 - (void)itemModel:(id)sender {

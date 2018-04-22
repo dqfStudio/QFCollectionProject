@@ -8,6 +8,8 @@
 
 #import "QFGroupModel.h"
 
+@class QFCollectionView;
+
 @interface QFCollectionModel : NSObject
 <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

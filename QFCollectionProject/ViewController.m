@@ -100,7 +100,7 @@
 }
 
 - (QFItemSelectionBlock)selectionBlock {
-    return ^(NSIndexPath *indexPath, UICollectionView *collection) {
+    return ^(NSIndexPath *indexPath, QFCollectionView *collection) {
         [collection deselectItemAtIndexPath:indexPath animated:YES];
     };
 }

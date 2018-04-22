@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef CGSize (^QFItemSizeBlock)(NSIndexPath *indexPath, UICollectionView *collection);
-typedef UICollectionViewCell * (^QFItemRenderBlock)(NSIndexPath *indexPath, id collection);
-typedef void (^QFItemSelectionBlock)(NSIndexPath *indexPath, UICollectionView *collection);
+@class QFCollectionView;
+
+typedef CGSize (^QFItemSizeBlock)(NSIndexPath *indexPath, QFCollectionView *collection);
+typedef UICollectionViewCell * (^QFItemRenderBlock)(NSIndexPath *indexPath, QFCollectionView *collection);
+typedef void (^QFItemSelectionBlock)(NSIndexPath *indexPath, QFCollectionView *collection);
 
 @interface QFItemModel : NSObject
 

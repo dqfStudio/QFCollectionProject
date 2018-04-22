@@ -164,6 +164,12 @@
         
         if([object respondsToSelector:NSSelectorFromString(itemSelector)]){
             [object performSelector:NSSelectorFromString(itemSelector) withObjects:@[itemModel]];
+            if (!itemModel.renderBlock) {
+                itemModel.renderBlock = [self renderBlock];
+            }
+            if (!itemModel.selectionBlock) {
+                itemModel.selectionBlock = [self selectionBlock];
+            }
         }else {
             itemModel.renderBlock = [self renderBlock];
             itemModel.selectionBlock = [self selectionBlock];
@@ -176,14 +182,14 @@
 }
 
 - (QFItemRenderBlock)renderBlock {
-    return ^UICollectionViewCell *(NSIndexPath *indexPath, UICollectionView *collection) {
+    return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
         UICollectionViewCell *cell = [self registerCell:UICollectionViewCell.class indexPath:indexPath];
         return cell;
     };
 }
 
 - (QFItemSelectionBlock)selectionBlock {
-    return ^(NSIndexPath *indexPath, UICollectionView *collection) {
+    return ^(NSIndexPath *indexPath, QFCollectionView *collection) {
         [collection deselectItemAtIndexPath:indexPath animated:YES];
     };
 }

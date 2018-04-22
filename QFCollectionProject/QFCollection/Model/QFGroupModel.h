@@ -8,8 +8,10 @@
 
 #import "QFItemModel.h"
 
-typedef UICollectionReusableView *(^QFViewRenderBlock)(NSInteger section, UICollectionView *collection);
-typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, UICollectionView *collection);
+@class QFCollectionView;
+
+typedef UICollectionReusableView *(^QFViewRenderBlock)(NSInteger section, QFCollectionView *collection);
+typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *collection);
 
 @interface QFGroupModel : NSObject
 

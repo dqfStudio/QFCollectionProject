@@ -88,7 +88,7 @@
     UICollectionViewCell *cell = nil;
     QFItemRenderBlock renderBlock = itemModel.renderBlock;
     if (renderBlock) {
-        cell = renderBlock(indexPath, collectionView);
+        cell = renderBlock(indexPath, (QFCollectionView *)collectionView);
     }
     return cell;
 }
@@ -96,7 +96,7 @@
     QFItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
     QFItemSizeBlock itemSizeBlock = itemModel.itemSizeBlock;
     if (itemSizeBlock) {
-        return itemSizeBlock(indexPath, collectionView);
+        return itemSizeBlock(indexPath, (QFCollectionView *)collectionView);
     } else {
         return itemModel.itemSize;
     }
@@ -105,7 +105,7 @@
     QFGroupModel *groupModel = [self groupModelAtSection:section];
     QFHeaderViewSizeBlock headerSizeBlock = groupModel.headerSizeBlock;
     if (headerSizeBlock) {
-        return headerSizeBlock(section, collectionView);
+        return headerSizeBlock(section, (QFCollectionView *)collectionView);
     } else {
         return groupModel.headerSize;
     }
@@ -115,7 +115,7 @@
         QFGroupModel *groupModel = [self groupModelAtSection:indexPath.section];
         QFViewRenderBlock headerViewRenderBlock = groupModel.headerViewRenderBlock;
         if (headerViewRenderBlock) {
-            return headerViewRenderBlock(indexPath.section, collectionView);
+            return headerViewRenderBlock(indexPath.section, (QFCollectionView *)collectionView);
         } else {
             return groupModel.headerView;
         }
@@ -126,7 +126,7 @@
     QFItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
     QFItemSelectionBlock selectionBlock = itemModel.selectionBlock;
     if (selectionBlock) {
-        selectionBlock(indexPath, collectionView);
+        selectionBlock(indexPath, (QFCollectionView *)collectionView);
     }
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {

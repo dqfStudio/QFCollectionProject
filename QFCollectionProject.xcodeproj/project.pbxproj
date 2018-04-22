@@ -13,13 +13,13 @@
 		1550754B206DD202008BD729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1550754A206DD202008BD729 /* Assets.xcassets */; };
 		1550754E206DD202008BD729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1550754C206DD202008BD729 /* LaunchScreen.storyboard */; };
 		15507551206DD202008BD729 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507550206DD202008BD729 /* main.m */; };
-		15507582206E4BB4008BD729 /* QFBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507573206E4BB4008BD729 /* QFBaseItem.m */; };
 		15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507576206E4BB4008BD729 /* NSObject+selector.m */; };
 		15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507579206E4BB4008BD729 /* QFGroupModel.m */; };
 		15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757A206E4BB4008BD729 /* QFCollectionModel.m */; };
 		15507586206E4BB4008BD729 /* QFItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757B206E4BB4008BD729 /* QFItemModel.m */; };
 		15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507580206E4BB4008BD729 /* QFCollectionView.m */; };
-		15CCD9A5208033D4000920A9 /* QFTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCD9A4208033D4000920A9 /* QFTestItem.m */; };
+		15B4D6CC208C8C3000773E04 /* QFBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6C9208C8C3000773E04 /* QFBaseItem.m */; };
+		15B4D6CD208C8C3000773E04 /* QFTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6CB208C8C3000773E04 /* QFTestItem.m */; };
 		15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */; };
 		292B8183646537DFF9DE3313 /* libPods-QFCollectionProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0556455C944519D43F5AA391 /* libPods-QFCollectionProject.a */; };
 /* End PBXBuildFile section */
@@ -37,8 +37,6 @@
 		1550754D206DD202008BD729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1550754F206DD202008BD729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15507550206DD202008BD729 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		15507573206E4BB4008BD729 /* QFBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFBaseItem.m; sourceTree = "<group>"; };
-		15507574206E4BB4008BD729 /* QFBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFBaseItem.h; sourceTree = "<group>"; };
 		15507576206E4BB4008BD729 /* NSObject+selector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+selector.m"; sourceTree = "<group>"; };
 		15507577206E4BB4008BD729 /* NSObject+selector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+selector.h"; sourceTree = "<group>"; };
 		15507579206E4BB4008BD729 /* QFGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFGroupModel.m; sourceTree = "<group>"; };
@@ -49,8 +47,10 @@
 		1550757E206E4BB4008BD729 /* QFItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFItemModel.h; sourceTree = "<group>"; };
 		15507580206E4BB4008BD729 /* QFCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCollectionView.m; sourceTree = "<group>"; };
 		15507581206E4BB4008BD729 /* QFCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCollectionView.h; sourceTree = "<group>"; };
-		15CCD9A3208033D4000920A9 /* QFTestItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFTestItem.h; sourceTree = "<group>"; };
-		15CCD9A4208033D4000920A9 /* QFTestItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFTestItem.m; sourceTree = "<group>"; };
+		15B4D6C8208C8C3000773E04 /* QFTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTestItem.h; sourceTree = "<group>"; };
+		15B4D6C9208C8C3000773E04 /* QFBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFBaseItem.m; sourceTree = "<group>"; };
+		15B4D6CA208C8C3000773E04 /* QFBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFBaseItem.h; sourceTree = "<group>"; };
+		15B4D6CB208C8C3000773E04 /* QFTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTestItem.m; sourceTree = "<group>"; };
 		15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
 		15CCD9AA20805507000920A9 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
 		C36A0B746D9A0A1421BD340A /* Pods-QFCollectionProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFCollectionProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +89,7 @@
 		15507540206DD202008BD729 /* QFCollectionProject */ = {
 			isa = PBXGroup;
 			children = (
+				15B4D6C6208C8C3000773E04 /* Tools */,
 				15507570206E4BB4008BD729 /* QFCollection */,
 				15507541206DD202008BD729 /* AppDelegate.h */,
 				15507542206DD202008BD729 /* AppDelegate.m */,
@@ -106,31 +107,11 @@
 		15507570206E4BB4008BD729 /* QFCollection */ = {
 			isa = PBXGroup;
 			children = (
-				15507571206E4BB4008BD729 /* Tools */,
 				15507575206E4BB4008BD729 /* NSObject+selector */,
 				15507578206E4BB4008BD729 /* Model */,
 				1550757F206E4BB4008BD729 /* View */,
 			);
 			path = QFCollection;
-			sourceTree = "<group>";
-		};
-		15507571206E4BB4008BD729 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				15507572206E4BB4008BD729 /* Cells */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		15507572206E4BB4008BD729 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				15507574206E4BB4008BD729 /* QFBaseItem.h */,
-				15507573206E4BB4008BD729 /* QFBaseItem.m */,
-				15CCD9A3208033D4000920A9 /* QFTestItem.h */,
-				15CCD9A4208033D4000920A9 /* QFTestItem.m */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		15507575206E4BB4008BD729 /* NSObject+selector */ = {
@@ -164,6 +145,25 @@
 				15507580206E4BB4008BD729 /* QFCollectionView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		15B4D6C6208C8C3000773E04 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				15B4D6C7208C8C3000773E04 /* Cells */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		15B4D6C7208C8C3000773E04 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				15B4D6C8208C8C3000773E04 /* QFTestItem.h */,
+				15B4D6C9208C8C3000773E04 /* QFBaseItem.m */,
+				15B4D6CA208C8C3000773E04 /* QFBaseItem.h */,
+				15B4D6CB208C8C3000773E04 /* QFTestItem.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		21FE4F61586A13D22848D476 /* Pods */ = {
@@ -312,12 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */,
-				15507582206E4BB4008BD729 /* QFBaseItem.m in Sources */,
 				15507546206DD202008BD729 /* ViewController.m in Sources */,
-				15CCD9A5208033D4000920A9 /* QFTestItem.m in Sources */,
 				15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */,
 				15507551206DD202008BD729 /* main.m in Sources */,
+				15B4D6CC208C8C3000773E04 /* QFBaseItem.m in Sources */,
 				15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				15B4D6CD208C8C3000773E04 /* QFTestItem.m in Sources */,
 				15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */,
 				15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */,
 				15507543206DD202008BD729 /* AppDelegate.m in Sources */,

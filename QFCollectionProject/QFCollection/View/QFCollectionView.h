@@ -15,7 +15,7 @@
 
 typedef void (^QFRefreshBlock)(void);
 typedef void (^QFLoadMoreBlock)(void);
-typedef void(^QFItemInitBlock)(id cell);
+typedef void(^QFItemInitBlock)(id cell, QFItemModel *itemModel);
 
 @interface QFCollectionView : UICollectionView
 

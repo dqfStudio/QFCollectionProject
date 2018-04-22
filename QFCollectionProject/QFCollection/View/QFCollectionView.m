@@ -68,7 +68,8 @@
             [self registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
             if (block) {
-                block(cell);
+                QFItemModel *itemModel = [self itemAtIndexPath:indexPath];
+                block(cell, itemModel);
             }
         }else {
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];

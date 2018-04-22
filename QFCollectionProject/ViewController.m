@@ -77,7 +77,7 @@
 
 - (QFItemRenderBlock)renderBlock {
     return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
+        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell, QFItemModel *itemModel) {
             [cell.titleLabel setText:@"hh"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentLeft];
         }];
@@ -89,9 +89,10 @@
 
 - (QFItemRenderBlock)renderBlock2 {
     return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
+        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell, QFItemModel *itemModel) {
             [cell.titleLabel setText:@"ww"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentCenter];
+            itemModel.itemSize = CGSizeMake(70, 70);
         }];
         [cell setBackgroundColor:[UIColor blueColor]];
         

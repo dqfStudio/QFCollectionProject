@@ -38,10 +38,14 @@ typedef void(^QFItemInitBlock)(id cell);
 //stop refresh
 - (void)endRefresh;
 
+#pragma --mark register cell
+
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath;
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier;
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath initBlock:(QFItemInitBlock)block;
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier initBlock:(QFItemInitBlock)block;
+
+#pragma --mark register cell
 
 - (void)refreshView:(id)object withArr:(NSArray *)arr;
 

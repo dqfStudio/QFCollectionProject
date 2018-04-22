@@ -23,6 +23,8 @@
 
 @implementation QFCollectionView
 
+#pragma --mark init
+
 - (instancetype)initWithFrame:(CGRect)frame {
     return [self initWithFrame:frame collectionViewLayout:[UICollectionViewLeftAlignedLayout new]];
 }
@@ -48,14 +50,16 @@
     return self;
 }
 
+#pragma --mark register cell
+
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath {
-    return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:NSStringFromClass(self.class) initBlock:nil];
+    return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:NSStringFromClass(cellClass) initBlock:nil];
 }
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier {
     return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:reuseIdentifier initBlock:nil];
 }
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath initBlock:(QFItemInitBlock)block {
-    return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:NSStringFromClass(self.class) initBlock:block];
+    return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:NSStringFromClass(cellClass) initBlock:block];
 }
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier initBlock:(QFItemInitBlock)block {
     UICollectionViewCell *cell = nil;
@@ -72,6 +76,8 @@
     }
     return cell;
 }
+
+#pragma --mark other methods
 
 //add QFGroupModel
 - (void)addModel:(QFGroupModel *)anObject {

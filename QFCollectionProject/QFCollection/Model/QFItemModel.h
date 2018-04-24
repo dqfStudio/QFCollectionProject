@@ -17,10 +17,13 @@ typedef void (^QFItemSelectionBlock)(NSIndexPath *indexPath, QFCollectionView *c
 
 @interface QFItemModel : NSObject
 
-@property (nonatomic, copy) QFItemSizeBlock itemSizeBlock;            // optional
-@property (nonatomic, copy) QFItemRenderBlock renderBlock;            // required
+#pragma -mark 允许外部设置
+@property (nonatomic, copy) QFItemRenderBlock renderBlock;            // optional
 @property (nonatomic, copy) QFItemSelectionBlock selectionBlock;      // optional
-@property (nonatomic, assign) CGSize itemSize;  // optional
+
+#pragma -mark 内部自动赋值
+@property (nonatomic, copy) QFItemSizeBlock itemSizeBlock;            // optional
+@property (nonatomic, assign) CGSize itemSize;  // 内部自动计算赋值
 @property (nonatomic, strong) NSString *selector; //cell对应的selector
 
 @end

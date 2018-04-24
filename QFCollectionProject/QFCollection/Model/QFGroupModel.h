@@ -19,6 +19,9 @@ typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *col
 @property (nonatomic, assign) CGFloat colInterval;  // optional
 @property (nonatomic, assign) CGFloat marginX;      // optional
 @property (nonatomic, assign) CGFloat marginTop;    // optional
+@property (nonatomic, assign) CGFloat rowItems;     // optional,默认1
+@property (nonatomic, assign) CGFloat whFactor;     // =h/w,默认1
+@property (nonatomic, assign) BOOL autoFitWH;       //自动匹配宽高，默认为YES
 
 @property (nonatomic, copy) QFHeaderViewSizeBlock headerSizeBlock;            // optional
 

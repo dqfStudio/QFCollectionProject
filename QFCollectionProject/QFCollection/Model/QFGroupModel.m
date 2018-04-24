@@ -18,6 +18,9 @@
     self = [super init];
     if (self) {
         _itemModelArray = [NSMutableArray array];
+        _rowItems  = 1;
+        _whFactor  = 1;
+        _autoFitWH = YES;
     }
     return self;
 }

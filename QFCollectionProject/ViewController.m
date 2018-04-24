@@ -51,6 +51,7 @@
     sectionModel.rowInterval = 10;
     sectionModel.colInterval = 10;
     sectionModel.marginTop = 22;
+    sectionModel.rowItems = 3;
 }
 
 - (void)groupModel2:(id)sender {
@@ -63,21 +64,19 @@
 
 - (void)itemModel:(id)sender {
     QFItemModel *cellModel = sender;
-    cellModel.itemSize = CGSizeMake(55, 55);
     cellModel.renderBlock = [self renderBlock];
     cellModel.selectionBlock = [self selectionBlock];
 }
 
 - (void)itemModel2:(id)sender {
     QFItemModel *cellModel = sender;
-    cellModel.itemSize = CGSizeMake(55, 55);
     cellModel.renderBlock = [self renderBlock2];
     cellModel.selectionBlock = [self selectionBlock];
 }
 
 - (QFItemRenderBlock)renderBlock {
     return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell, QFItemModel *itemModel) {
+        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
             [cell.titleLabel setText:@"hh"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentLeft];
         }];
@@ -89,10 +88,9 @@
 
 - (QFItemRenderBlock)renderBlock2 {
     return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell, QFItemModel *itemModel) {
+        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
             [cell.titleLabel setText:@"ww"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentCenter];
-            itemModel.itemSize = CGSizeMake(70, 70);
         }];
         [cell setBackgroundColor:[UIColor blueColor]];
         

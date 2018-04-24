@@ -68,8 +68,7 @@
             [self registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
             if (block) {
-                QFItemModel *itemModel = [self itemAtIndexPath:indexPath];
-                block(cell, itemModel);
+                block(cell);
             }
         }else {
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
@@ -99,8 +98,11 @@
 }
 
 - (void)itemAtIndexPath:(NSIndexPath *)indexPath resetSize:(CGSize)size {
-    QFItemModel *itemModel = [self itemAtIndexPath:indexPath];;
-    itemModel.itemSize = size;
+    QFGroupModel *groupModel = [self groupAtIndex:indexPath.section];
+    if (!groupModel.autoFitWH) {
+        QFItemModel *itemModel = [self itemAtIndexPath:indexPath];;
+        itemModel.itemSize = size;
+    }
 }
 
 - (void)reloadModel {
@@ -180,6 +182,13 @@
         }else {
             itemModel.renderBlock = [self renderBlock];
             itemModel.selectionBlock = [self selectionBlock];
+        }
+        //设置item size
+        if (groupModel.autoFitWH) {
+            CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+            CGFloat width  = (screenWidth - groupModel.marginX*2 - groupModel.colInterval*(groupModel.rowItems-1))/groupModel.rowItems;
+            CGFloat height = width * groupModel.whFactor;
+            itemModel.itemSize = CGSizeMake(width, height);
         }
     }
     

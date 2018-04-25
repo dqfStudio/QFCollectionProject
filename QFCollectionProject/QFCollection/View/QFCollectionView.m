@@ -97,14 +97,6 @@
     return [groupModel itemAtIndex:indexPath.row];
 }
 
-- (void)itemAtIndexPath:(NSIndexPath *)indexPath resetSize:(CGSize)size {
-    QFGroupModel *groupModel = [self groupAtIndex:indexPath.section];
-    if (!groupModel.autoFitWH) {
-        QFItemModel *itemModel = [self itemAtIndexPath:indexPath];;
-        itemModel.itemSize = size;
-    }
-}
-
 - (void)reloadModel {
     for (int i=0; i<[self.collectionModel groups]; i++) {
         QFGroupModel *groupModel = [self.collectionModel groupAtIndex:i];
@@ -184,12 +176,13 @@
             itemModel.selectionBlock = [self selectionBlock];
         }
         //设置item size
-        if (groupModel.autoFitWH) {
-            CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
-            CGFloat width  = (screenWidth - groupModel.marginX*2 - groupModel.colInterval*(groupModel.rowItems-1))/groupModel.rowItems;
-            CGFloat height = width * groupModel.whFactor;
-            itemModel.itemSize = CGSizeMake(width, height);
+        CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+        CGFloat width  = (screenWidth - groupModel.marginX*2 - groupModel.colInterval*(groupModel.rowItems-1))/groupModel.rowItems;
+        CGFloat height = width * groupModel.whFactor;
+        if (groupModel.height > 0) {
+            height = groupModel.height;
         }
+        itemModel.itemSize = CGSizeMake(width, height);
     }
     
     //刷新列表

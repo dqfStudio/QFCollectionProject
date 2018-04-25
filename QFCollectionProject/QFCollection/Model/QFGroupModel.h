@@ -15,13 +15,16 @@ typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *col
 
 @interface QFGroupModel : NSObject
 
+#pragma -mark 允许外部设置
 @property (nonatomic, assign) CGFloat rowInterval;  // optional
 @property (nonatomic, assign) CGFloat colInterval;  // optional
 @property (nonatomic, assign) CGFloat marginX;      // optional
 @property (nonatomic, assign) CGFloat marginTop;    // optional
 @property (nonatomic, assign) CGFloat rowItems;     // optional,默认1
+
+#pragma -mark 内部自动赋值，也允许外部设置
 @property (nonatomic, assign) CGFloat whFactor;     // =h/w,默认1
-@property (nonatomic, assign) BOOL autoFitWH;       //自动匹配宽高，默认为YES
+@property (nonatomic, assign) CGFloat height;       // 设置item的固定高度，与whFactor只能二选一，优先级高于whFactor
 
 @property (nonatomic, copy) QFHeaderViewSizeBlock headerSizeBlock;            // optional
 

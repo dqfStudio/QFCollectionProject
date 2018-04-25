@@ -20,7 +20,6 @@
         _itemModelArray = [NSMutableArray array];
         _rowItems  = 1;
         _whFactor  = 1;
-        _autoFitWH = YES;
     }
     return self;
 }

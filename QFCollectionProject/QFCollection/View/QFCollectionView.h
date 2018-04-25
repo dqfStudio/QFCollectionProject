@@ -51,7 +51,5 @@ typedef void(^QFItemInitBlock)(id cell);
 
 - (void)loadView:(id)object withArr:(NSArray *)arr;
 
-- (void)itemAtIndexPath:(NSIndexPath *)indexPath resetSize:(CGSize)size;
-
 @end
 

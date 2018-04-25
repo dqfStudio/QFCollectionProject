@@ -37,6 +37,10 @@
                      @"groupModel<0>itemModel",
                      @"groupModel<0>itemModel",
                      @"groupModel<0>itemModel",
+                     @"groupModel2<1>itemModel2",
+                     @"groupModel2<1>itemModel2",
+                     @"groupModel2<1>itemModel2",
+                     @"groupModel2<1>itemModel2",
                      @"groupModel2<1>itemModel2"];
 
 
@@ -47,7 +51,7 @@
 
 - (void)groupModel:(id)sender {
     QFGroupModel *sectionModel = sender;
-    sectionModel.marginX = 10;
+//    sectionModel.marginX = 10;
     sectionModel.rowInterval = 10;
     sectionModel.colInterval = 10;
     sectionModel.marginTop = 22;
@@ -56,10 +60,11 @@
 
 - (void)groupModel2:(id)sender {
     QFGroupModel *sectionModel = sender;
-    sectionModel.marginX = 10;
+//    sectionModel.marginX = 10;
     sectionModel.rowInterval = 10;
-    sectionModel.colInterval = 10;
     sectionModel.marginTop = 10;
+    sectionModel.whFactor = 0.7;
+    sectionModel.height = 100;
 }
 
 - (void)itemModel:(id)sender {
@@ -93,7 +98,6 @@
             [cell.titleLabel setTextAlignment:NSTextAlignmentCenter];
         }];
         [cell setBackgroundColor:[UIColor blueColor]];
-        
         return cell;
     };
 }

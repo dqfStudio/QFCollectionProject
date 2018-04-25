@@ -13,7 +13,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        [_titleLabel setFrame:CGRectMake(0, 0, 55, 55)];
+        [_titleLabel setFrame:self.bounds];
         [_titleLabel setTextColor:[UIColor blackColor]];
     }
     return _titleLabel;

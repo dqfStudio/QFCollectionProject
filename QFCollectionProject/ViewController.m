@@ -64,7 +64,7 @@
     arr3.setGroupModel(1, @"groupModel2");
 
     [self.collection loadView:self withArr:arr];
-//    [self.collection loadView:self withArr:arr2.link(arr3)];
+//    [self.collection loadView:self withArr:arr2.linkItem(arr3)];
 
 }
 

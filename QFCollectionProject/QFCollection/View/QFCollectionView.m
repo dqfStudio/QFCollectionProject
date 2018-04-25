@@ -315,7 +315,7 @@
     objc_setAssociatedObject(self, @selector(groupModel), groupModel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSArray *(^)(NSArray *))link {
+- (NSArray *(^)(NSArray *))linkItem {
     return ^NSArray *(NSArray *obj) {
         NSMutableArray *mutableArr = [[NSMutableArray alloc] init];
         for (int i=0; i<self.count; i++) {

@@ -295,3 +295,44 @@
 }
 @end
 
+@interface NSArray ()
+@property (nonatomic) NSInteger group;
+@property (nonatomic) NSString *groupModel;
+@end
+
+@implementation NSArray (QFCollectionView)
+- (NSInteger)group {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+}
+- (void)setGroup:(NSInteger)group {
+    objc_setAssociatedObject(self, @selector(group), @(group), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)groupModel {
+    return objc_getAssociatedObject(self, _cmd);
+}
+- (void)setGroupModel:(NSString *)groupModel {
+    objc_setAssociatedObject(self, @selector(groupModel), groupModel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSArray *(^)(NSArray *))link {
+    return ^NSArray *(NSArray *obj) {
+        NSMutableArray *mutableArr = [[NSMutableArray alloc] init];
+        for (int i=0; i<self.count; i++) {
+            NSString *model = self.groupModel.append(@"<").append(@(self.group)).append(@">").append(self[i]);
+            [mutableArr addObject:model];
+        }
+        for (int i=0; i<obj.count; i++) {
+            NSString *model = obj.groupModel.append(@"<").append(@(obj.group)).append(@">").append(obj[i]);
+            [mutableArr addObject:model];
+        }
+        return mutableArr;
+    };
+}
+- (void (^)(NSUInteger group, NSString *groupModel))setGroupModel {
+    return ^void (NSUInteger group, NSString *groupModel) {
+        self.group = group;
+        self.groupModel = groupModel;
+    };
+}
+@end

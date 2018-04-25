@@ -53,3 +53,7 @@ typedef void(^QFItemInitBlock)(id cell);
 
 @end
 
+@interface NSArray (QFCollectionView)
+- (NSArray *(^)(NSArray *))link;
+- (void (^)(NSUInteger group, NSString *groupModel))setGroupModel;
+@end

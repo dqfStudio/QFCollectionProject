@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_QFCollectionProject : NSObject
+@interface PodsDummy_Pods_HCollectionProject : NSObject
 @end
-@implementation PodsDummy_Pods_QFCollectionProject
+@implementation PodsDummy_Pods_HCollectionProject
 @end

@@ -1,14 +1,14 @@
 //
-//  QFBaseItem.m
-//  QFCollectionProject
+//  HBaseItem.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFBaseItem.h"
+#import "HBaseItem.h"
 
-@implementation QFBaseItem
+@implementation HBaseItem
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

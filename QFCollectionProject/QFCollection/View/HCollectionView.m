@@ -1,12 +1,12 @@
 //
-//  QFCollectionView.m
-//  QFCollectionProject
+//  HCollectionView.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFCollectionView.h"
+#import "HCollectionView.h"
 #import <objc/runtime.h>
 
 #define KDefaultPageSize 20
@@ -16,12 +16,12 @@
 - (NSArray<NSString *> *(^)(NSString *))componentsBySetString;
 @end
 
-@interface QFCollectionView ()
+@interface HCollectionView ()
 @property (nonatomic, weak)   id objc;
-@property (nonatomic, strong) QFCollectionModel *collectionModel;
+@property (nonatomic, strong) HCollectionModel *collectionModel;
 @end
 
-@implementation QFCollectionView
+@implementation HCollectionView
 
 #pragma --mark init
 
@@ -42,7 +42,7 @@
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         
-        self.collectionModel = [[QFCollectionModel alloc] init];
+        self.collectionModel = [[HCollectionModel alloc] init];
         self.delegate = self.collectionModel;
         self.dataSource = self.collectionModel;
         self.allReuseCells = [[NSMutableArray alloc] init];
@@ -58,10 +58,10 @@
 - (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier {
     return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:reuseIdentifier initBlock:nil];
 }
-- (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath initBlock:(QFItemInitBlock)block {
+- (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath initBlock:(HItemInitBlock)block {
     return [self registerCell:cellClass indexPath:indexPath reuseIdentifier:NSStringFromClass(cellClass) initBlock:block];
 }
-- (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier initBlock:(QFItemInitBlock)block {
+- (id)registerCell:(Class)cellClass indexPath:(NSIndexPath *)indexPath reuseIdentifier:(NSString *)reuseIdentifier initBlock:(HItemInitBlock)block {
     UICollectionViewCell *cell = nil;
     if (reuseIdentifier.length > 0) {
         if (![self.allReuseCells containsObject:reuseIdentifier]) {
@@ -79,27 +79,27 @@
 
 #pragma --mark other methods
 
-//add QFGroupModel
-- (void)addModel:(QFGroupModel *)anObject {
+//add HGroupModel
+- (void)addModel:(HGroupModel *)anObject {
     [self.collectionModel addModel:anObject];
 }
 
-- (QFGroupModel *)groupAtIndex:(NSUInteger)index {
+- (HGroupModel *)groupAtIndex:(NSUInteger)index {
     return [self.collectionModel groupAtIndex:index];
 }
 
-- (NSUInteger)indexOfGroup:(QFGroupModel  *)anObject {
+- (NSUInteger)indexOfGroup:(HGroupModel  *)anObject {
     return [self.collectionModel indexOfGroup:anObject];
 }
 
-- (QFItemModel *)itemAtIndexPath:(NSIndexPath *)indexPath {
-    QFGroupModel *groupModel = [self groupAtIndex:indexPath.section];
+- (HItemModel *)itemAtIndexPath:(NSIndexPath *)indexPath {
+    HGroupModel *groupModel = [self groupAtIndex:indexPath.section];
     return [groupModel itemAtIndex:indexPath.row];
 }
 
 - (void)reloadModel {
     for (int i=0; i<[self.collectionModel groups]; i++) {
-        QFGroupModel *groupModel = [self.collectionModel groupAtIndex:i];
+        HGroupModel *groupModel = [self.collectionModel groupAtIndex:i];
         NSString *groupSelector = groupModel.selector;
         if (groupSelector.length > 0 && groupModel) {
             SEL sel = NSSelectorFromString(groupModel.selector);
@@ -108,7 +108,7 @@
             }
             
             for (int j=0; j<[groupModel items]; j++) {
-                QFItemModel *itemModel = [groupModel itemAtIndex:j];
+                HItemModel *itemModel = [groupModel itemAtIndex:j];
                 NSString *itemSelector = itemModel.selector;
                 if (itemSelector.length > 0 && itemModel) {
                     SEL sel = NSSelectorFromString(itemModel.selector);
@@ -148,9 +148,9 @@
         NSString *group = tmpArr[1];
         NSString *itemSelector = tmpArr[2].append(@":");
         
-        QFGroupModel *groupModel = [self groupAtIndex:group.integerValue];
+        HGroupModel *groupModel = [self groupAtIndex:group.integerValue];
         if (!groupModel) {
-            groupModel = [QFGroupModel new];
+            groupModel = [HGroupModel new];
             [groupModel setSelector:groupSelector];
             [self addModel:groupModel];
             
@@ -159,7 +159,7 @@
             }
         }
         
-        QFItemModel *itemModel = [QFItemModel new];
+        HItemModel *itemModel = [HItemModel new];
         [itemModel setSelector:itemSelector];
         [groupModel addModel:itemModel];
         
@@ -190,15 +190,15 @@
     [self endRefresh];
 }
 
-- (QFItemRenderBlock)renderBlock {
-    return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
+- (HItemRenderBlock)renderBlock {
+    return ^UICollectionViewCell *(NSIndexPath *indexPath, HCollectionView *collection) {
         UICollectionViewCell *cell = [self registerCell:UICollectionViewCell.class indexPath:indexPath];
         return cell;
     };
 }
 
-- (QFItemSelectionBlock)selectionBlock {
-    return ^(NSIndexPath *indexPath, QFCollectionView *collection) {
+- (HItemSelectionBlock)selectionBlock {
+    return ^(NSIndexPath *indexPath, HCollectionView *collection) {
         [collection deselectItemAtIndexPath:indexPath animated:YES];
     };
 }
@@ -240,7 +240,7 @@
     [self.mj_footer endRefreshing];
 }
 
-- (void)setRefreshBlock:(QFRefreshBlock)refreshBlock {
+- (void)setRefreshBlock:(HRefreshBlock)refreshBlock {
     _refreshBlock = refreshBlock;
     if (_refreshBlock) {
         self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -252,7 +252,7 @@
     }
 }
 
-- (void)setLoadMoreBlock:(QFLoadMoreBlock)loadMoreBlock {
+- (void)setLoadMoreBlock:(HLoadMoreBlock)loadMoreBlock {
     _loadMoreBlock = loadMoreBlock;
     if (_loadMoreBlock) {
         [self setPageNo:1];
@@ -300,7 +300,7 @@
 @property (nonatomic) NSString *groupModel;
 @end
 
-@implementation NSArray (QFCollectionView)
+@implementation NSArray (HCollectionView)
 - (NSInteger)group {
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }

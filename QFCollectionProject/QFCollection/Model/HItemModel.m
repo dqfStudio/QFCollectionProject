@@ -1,14 +1,14 @@
 //
-//  QFItemModel.m
-//  QFCollectionProject
+//  HItemModel.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFItemModel.h"
+#import "HItemModel.h"
 
-@implementation QFItemModel
+@implementation HItemModel
 
 - (instancetype)init {
     self = [super init];

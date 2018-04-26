@@ -1,18 +1,18 @@
 //
-//  QFGroupModel.m
-//  QFCollectionProject
+//  HGroupModel.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFGroupModel.h"
+#import "HGroupModel.h"
 
-@interface QFGroupModel ()
-@property (nonatomic) NSMutableArray<QFItemModel *> *itemModelArray;
+@interface HGroupModel ()
+@property (nonatomic) NSMutableArray<HItemModel *> *itemModelArray;
 @end
 
-@implementation QFGroupModel
+@implementation HGroupModel
 
 - (instancetype)init {
     self = [super init];
@@ -24,23 +24,23 @@
     return self;
 }
 
-- (void)addModel:(QFItemModel *)anObject {
-    if ([anObject isKindOfClass:[QFItemModel class]]) {
+- (void)addModel:(HItemModel *)anObject {
+    if ([anObject isKindOfClass:[HItemModel class]]) {
         if (![self.itemModelArray containsObject:anObject]) {
             [self.itemModelArray addObject:anObject];
         }
     }
 }
 
-- (QFItemModel *)itemAtIndex:(NSUInteger)index {
+- (HItemModel *)itemAtIndex:(NSUInteger)index {
     if (index < self.itemModelArray.count) {
         return self.itemModelArray[index];
     }
     return nil;
 }
 
-- (NSUInteger)indexOfItem:(QFItemModel *)anObject {
-    if ([anObject isKindOfClass:[QFItemModel class]]) {
+- (NSUInteger)indexOfItem:(HItemModel *)anObject {
+    if ([anObject isKindOfClass:[HItemModel class]]) {
         return [self.itemModelArray indexOfObject:anObject];
     }
     return -1;

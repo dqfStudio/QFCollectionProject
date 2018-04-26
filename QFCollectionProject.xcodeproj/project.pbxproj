@@ -14,12 +14,12 @@
 		1550754E206DD202008BD729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1550754C206DD202008BD729 /* LaunchScreen.storyboard */; };
 		15507551206DD202008BD729 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507550206DD202008BD729 /* main.m */; };
 		15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507576206E4BB4008BD729 /* NSObject+selector.m */; };
-		15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507579206E4BB4008BD729 /* QFGroupModel.m */; };
-		15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757A206E4BB4008BD729 /* QFCollectionModel.m */; };
-		15507586206E4BB4008BD729 /* QFItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757B206E4BB4008BD729 /* QFItemModel.m */; };
-		15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507580206E4BB4008BD729 /* QFCollectionView.m */; };
-		15B4D6CC208C8C3000773E04 /* QFBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6C9208C8C3000773E04 /* QFBaseItem.m */; };
-		15B4D6CD208C8C3000773E04 /* QFTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6CB208C8C3000773E04 /* QFTestItem.m */; };
+		15507584206E4BB4008BD729 /* HGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507579206E4BB4008BD729 /* HGroupModel.m */; };
+		15507585206E4BB4008BD729 /* HCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757A206E4BB4008BD729 /* HCollectionModel.m */; };
+		15507586206E4BB4008BD729 /* HItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1550757B206E4BB4008BD729 /* HItemModel.m */; };
+		15507587206E4BB4008BD729 /* HCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15507580206E4BB4008BD729 /* HCollectionView.m */; };
+		15B4D6CC208C8C3000773E04 /* HBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6C9208C8C3000773E04 /* HBaseItem.m */; };
+		15B4D6CD208C8C3000773E04 /* HTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B4D6CB208C8C3000773E04 /* HTestItem.m */; };
 		15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */; };
 		292B8183646537DFF9DE3313 /* libPods-QFCollectionProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0556455C944519D43F5AA391 /* libPods-QFCollectionProject.a */; };
 /* End PBXBuildFile section */
@@ -39,18 +39,18 @@
 		15507550206DD202008BD729 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15507576206E4BB4008BD729 /* NSObject+selector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+selector.m"; sourceTree = "<group>"; };
 		15507577206E4BB4008BD729 /* NSObject+selector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+selector.h"; sourceTree = "<group>"; };
-		15507579206E4BB4008BD729 /* QFGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFGroupModel.m; sourceTree = "<group>"; };
-		1550757A206E4BB4008BD729 /* QFCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCollectionModel.m; sourceTree = "<group>"; };
-		1550757B206E4BB4008BD729 /* QFItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFItemModel.m; sourceTree = "<group>"; };
-		1550757C206E4BB4008BD729 /* QFCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCollectionModel.h; sourceTree = "<group>"; };
-		1550757D206E4BB4008BD729 /* QFGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFGroupModel.h; sourceTree = "<group>"; };
-		1550757E206E4BB4008BD729 /* QFItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFItemModel.h; sourceTree = "<group>"; };
-		15507580206E4BB4008BD729 /* QFCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFCollectionView.m; sourceTree = "<group>"; };
-		15507581206E4BB4008BD729 /* QFCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFCollectionView.h; sourceTree = "<group>"; };
-		15B4D6C8208C8C3000773E04 /* QFTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTestItem.h; sourceTree = "<group>"; };
-		15B4D6C9208C8C3000773E04 /* QFBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFBaseItem.m; sourceTree = "<group>"; };
-		15B4D6CA208C8C3000773E04 /* QFBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFBaseItem.h; sourceTree = "<group>"; };
-		15B4D6CB208C8C3000773E04 /* QFTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTestItem.m; sourceTree = "<group>"; };
+		15507579206E4BB4008BD729 /* HGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGroupModel.m; sourceTree = "<group>"; };
+		1550757A206E4BB4008BD729 /* HCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectionModel.m; sourceTree = "<group>"; };
+		1550757B206E4BB4008BD729 /* HItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HItemModel.m; sourceTree = "<group>"; };
+		1550757C206E4BB4008BD729 /* HCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCollectionModel.h; sourceTree = "<group>"; };
+		1550757D206E4BB4008BD729 /* HGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGroupModel.h; sourceTree = "<group>"; };
+		1550757E206E4BB4008BD729 /* HItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HItemModel.h; sourceTree = "<group>"; };
+		15507580206E4BB4008BD729 /* HCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectionView.m; sourceTree = "<group>"; };
+		15507581206E4BB4008BD729 /* HCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCollectionView.h; sourceTree = "<group>"; };
+		15B4D6C8208C8C3000773E04 /* HTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTestItem.h; sourceTree = "<group>"; };
+		15B4D6C9208C8C3000773E04 /* HBaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBaseItem.m; sourceTree = "<group>"; };
+		15B4D6CA208C8C3000773E04 /* HBaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBaseItem.h; sourceTree = "<group>"; };
+		15B4D6CB208C8C3000773E04 /* HTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTestItem.m; sourceTree = "<group>"; };
 		15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
 		15CCD9AA20805507000920A9 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
 		C36A0B746D9A0A1421BD340A /* Pods-QFCollectionProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QFCollectionProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QFCollectionProject/Pods-QFCollectionProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,12 +126,12 @@
 		15507578206E4BB4008BD729 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1550757C206E4BB4008BD729 /* QFCollectionModel.h */,
-				1550757A206E4BB4008BD729 /* QFCollectionModel.m */,
-				1550757D206E4BB4008BD729 /* QFGroupModel.h */,
-				15507579206E4BB4008BD729 /* QFGroupModel.m */,
-				1550757E206E4BB4008BD729 /* QFItemModel.h */,
-				1550757B206E4BB4008BD729 /* QFItemModel.m */,
+				1550757C206E4BB4008BD729 /* HCollectionModel.h */,
+				1550757A206E4BB4008BD729 /* HCollectionModel.m */,
+				1550757D206E4BB4008BD729 /* HGroupModel.h */,
+				15507579206E4BB4008BD729 /* HGroupModel.m */,
+				1550757E206E4BB4008BD729 /* HItemModel.h */,
+				1550757B206E4BB4008BD729 /* HItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 			children = (
 				15CCD9AA20805507000920A9 /* UICollectionViewLeftAlignedLayout.h */,
 				15CCD9A920805507000920A9 /* UICollectionViewLeftAlignedLayout.m */,
-				15507581206E4BB4008BD729 /* QFCollectionView.h */,
-				15507580206E4BB4008BD729 /* QFCollectionView.m */,
+				15507581206E4BB4008BD729 /* HCollectionView.h */,
+				15507580206E4BB4008BD729 /* HCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,10 +158,10 @@
 		15B4D6C7208C8C3000773E04 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				15B4D6C8208C8C3000773E04 /* QFTestItem.h */,
-				15B4D6C9208C8C3000773E04 /* QFBaseItem.m */,
-				15B4D6CA208C8C3000773E04 /* QFBaseItem.h */,
-				15B4D6CB208C8C3000773E04 /* QFTestItem.m */,
+				15B4D6CA208C8C3000773E04 /* HBaseItem.h */,
+				15B4D6C9208C8C3000773E04 /* HBaseItem.m */,
+				15B4D6C8208C8C3000773E04 /* HTestItem.h */,
+				15B4D6CB208C8C3000773E04 /* HTestItem.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -311,17 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15507585206E4BB4008BD729 /* QFCollectionModel.m in Sources */,
+				15507585206E4BB4008BD729 /* HCollectionModel.m in Sources */,
 				15507546206DD202008BD729 /* ViewController.m in Sources */,
-				15507584206E4BB4008BD729 /* QFGroupModel.m in Sources */,
+				15507584206E4BB4008BD729 /* HGroupModel.m in Sources */,
 				15507551206DD202008BD729 /* main.m in Sources */,
-				15B4D6CC208C8C3000773E04 /* QFBaseItem.m in Sources */,
+				15B4D6CC208C8C3000773E04 /* HBaseItem.m in Sources */,
 				15CCD9AB20805507000920A9 /* UICollectionViewLeftAlignedLayout.m in Sources */,
-				15B4D6CD208C8C3000773E04 /* QFTestItem.m in Sources */,
-				15507587206E4BB4008BD729 /* QFCollectionView.m in Sources */,
+				15B4D6CD208C8C3000773E04 /* HTestItem.m in Sources */,
+				15507587206E4BB4008BD729 /* HCollectionView.m in Sources */,
 				15507583206E4BB4008BD729 /* NSObject+selector.m in Sources */,
 				15507543206DD202008BD729 /* AppDelegate.m in Sources */,
-				15507586206E4BB4008BD729 /* QFItemModel.m in Sources */,
+				15507586206E4BB4008BD729 /* HItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,19 +1,19 @@
 //
 //  ViewController.m
-//  QFCollectionProject
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "QFCollectionView.h"
-#import "QFBaseItem.h"
-#import "QFTestItem.h"
+#import "HCollectionView.h"
+#import "HBaseItem.h"
+#import "HTestItem.h"
 
 @interface ViewController ()
 
-@property (nonatomic) QFCollectionView *collection;
+@property (nonatomic) HCollectionView *collection;
 
 @end
 
@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _collection = [[QFCollectionView alloc] initWithFrame:self.view.frame];
+    _collection = [[HCollectionView alloc] initWithFrame:self.view.frame];
     [_collection setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_collection];
 
@@ -70,7 +70,7 @@
 
 
 - (void)groupModel:(id)sender {
-    QFGroupModel *sectionModel = sender;
+    HGroupModel *sectionModel = sender;
 //    sectionModel.marginX = 10;
     sectionModel.rowInterval = 10;
     sectionModel.colInterval = 10;
@@ -79,7 +79,7 @@
 }
 
 - (void)groupModel2:(id)sender {
-    QFGroupModel *sectionModel = sender;
+    HGroupModel *sectionModel = sender;
 //    sectionModel.marginX = 10;
     sectionModel.rowInterval = 10;
     sectionModel.marginTop = 10;
@@ -88,20 +88,20 @@
 }
 
 - (void)itemModel:(id)sender {
-    QFItemModel *cellModel = sender;
+    HItemModel *cellModel = sender;
     cellModel.renderBlock = [self renderBlock];
     cellModel.selectionBlock = [self selectionBlock];
 }
 
 - (void)itemModel2:(id)sender {
-    QFItemModel *cellModel = sender;
+    HItemModel *cellModel = sender;
     cellModel.renderBlock = [self renderBlock2];
     cellModel.selectionBlock = [self selectionBlock];
 }
 
-- (QFItemRenderBlock)renderBlock {
-    return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
+- (HItemRenderBlock)renderBlock {
+    return ^UICollectionViewCell *(NSIndexPath *indexPath, HCollectionView *collection) {
+        HTestItem *cell = [collection registerCell:HTestItem.class indexPath:indexPath initBlock:^(HTestItem *cell) {
             [cell.titleLabel setText:@"hh"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentLeft];
         }];
@@ -111,9 +111,9 @@
     };
 }
 
-- (QFItemRenderBlock)renderBlock2 {
-    return ^UICollectionViewCell *(NSIndexPath *indexPath, QFCollectionView *collection) {
-        QFTestItem *cell = [collection registerCell:QFTestItem.class indexPath:indexPath initBlock:^(QFTestItem *cell) {
+- (HItemRenderBlock)renderBlock2 {
+    return ^UICollectionViewCell *(NSIndexPath *indexPath, HCollectionView *collection) {
+        HTestItem *cell = [collection registerCell:HTestItem.class indexPath:indexPath initBlock:^(HTestItem *cell) {
             [cell.titleLabel setText:@"ww"];
             [cell.titleLabel setTextAlignment:NSTextAlignmentCenter];
         }];
@@ -122,8 +122,8 @@
     };
 }
 
-- (QFItemSelectionBlock)selectionBlock {
-    return ^(NSIndexPath *indexPath, QFCollectionView *collection) {
+- (HItemSelectionBlock)selectionBlock {
+    return ^(NSIndexPath *indexPath, HCollectionView *collection) {
         [collection deselectItemAtIndexPath:indexPath animated:YES];
     };
 }

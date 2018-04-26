@@ -1,14 +1,14 @@
 //
-//  QFTestItem.m
-//  QFCollectionProject
+//  HTestItem.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/4/13.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFTestItem.h"
+#import "HTestItem.h"
 
-@implementation QFTestItem
+@implementation HTestItem
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {

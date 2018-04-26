@@ -1,18 +1,18 @@
 //
-//  QFCollectionModel.m
-//  QFCollectionProject
+//  HCollectionModel.m
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFCollectionModel.h"
+#import "HCollectionModel.h"
 
-@interface QFCollectionModel ()
-@property (nonatomic) NSMutableArray<QFGroupModel *> *groupModelArray;
+@interface HCollectionModel ()
+@property (nonatomic) NSMutableArray<HGroupModel *> *groupModelArray;
 @end
 
-@implementation QFCollectionModel
+@implementation HCollectionModel
 
 - (instancetype)init {
     self = [super init];
@@ -22,23 +22,23 @@
     return self;
 }
 
-- (void)addModel:(QFGroupModel *)anObject {
-    if ([anObject isKindOfClass:[QFGroupModel class]]) {
+- (void)addModel:(HGroupModel *)anObject {
+    if ([anObject isKindOfClass:[HGroupModel class]]) {
         if (![self.groupModelArray containsObject:anObject]) {
             [self.groupModelArray addObject:anObject];
         }
     }
 }
 
-- (QFGroupModel *)groupAtIndex:(NSUInteger)index {
+- (HGroupModel *)groupAtIndex:(NSUInteger)index {
     if (index < self.groupModelArray.count) {
         return self.groupModelArray[index];
     }
     return nil;
 }
 
-- (NSUInteger)indexOfGroup:(QFGroupModel *)anObject {
-    if ([anObject isKindOfClass:[QFGroupModel class]]) {
+- (NSUInteger)indexOfGroup:(HGroupModel *)anObject {
+    if ([anObject isKindOfClass:[HGroupModel class]]) {
         return [self.groupModelArray indexOfObject:anObject];
     }
     return -1;
@@ -54,9 +54,9 @@
     }
 }
 
-- (QFGroupModel*)groupModelAtSection:(NSInteger)section {
+- (HGroupModel*)groupModelAtSection:(NSInteger)section {
     @try {
-        QFGroupModel *groupModel = self.groupModelArray[section];
+        HGroupModel *groupModel = self.groupModelArray[section];
         return groupModel;
     }
     @catch (NSException *exception) {
@@ -64,10 +64,10 @@
     }
 }
 
-- (QFItemModel*)itemModelAtIndexPath:(NSIndexPath *)indexPath {
+- (HItemModel*)itemModelAtIndexPath:(NSIndexPath *)indexPath {
     @try {
-        QFGroupModel *groupModel = self.groupModelArray[indexPath.section];
-        QFItemModel *itemModel = [groupModel itemAtIndex:indexPath.row];
+        HGroupModel *groupModel = self.groupModelArray[indexPath.section];
+        HItemModel *itemModel = [groupModel itemAtIndex:indexPath.row];
         return itemModel;
     }
     @catch (NSException *exception) {
@@ -80,42 +80,42 @@
     return [self groups];
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    QFGroupModel *groupModel = [self groupModelAtSection:section];
+    HGroupModel *groupModel = [self groupModelAtSection:section];
     return [groupModel items];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    QFItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
+    HItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
     UICollectionViewCell *cell = nil;
-    QFItemRenderBlock renderBlock = itemModel.renderBlock;
+    HItemRenderBlock renderBlock = itemModel.renderBlock;
     if (renderBlock) {
-        cell = renderBlock(indexPath, (QFCollectionView *)collectionView);
+        cell = renderBlock(indexPath, (HCollectionView *)collectionView);
     }
     return cell;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    QFItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
-    QFItemSizeBlock itemSizeBlock = itemModel.itemSizeBlock;
+    HItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
+    HItemSizeBlock itemSizeBlock = itemModel.itemSizeBlock;
     if (itemSizeBlock) {
-        return itemSizeBlock(indexPath, (QFCollectionView *)collectionView);
+        return itemSizeBlock(indexPath, (HCollectionView *)collectionView);
     } else {
         return itemModel.itemSize;
     }
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    QFGroupModel *groupModel = [self groupModelAtSection:section];
-    QFHeaderViewSizeBlock headerSizeBlock = groupModel.headerSizeBlock;
+    HGroupModel *groupModel = [self groupModelAtSection:section];
+    HHeaderViewSizeBlock headerSizeBlock = groupModel.headerSizeBlock;
     if (headerSizeBlock) {
-        return headerSizeBlock(section, (QFCollectionView *)collectionView);
+        return headerSizeBlock(section, (HCollectionView *)collectionView);
     } else {
         return groupModel.headerSize;
     }
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (kind == UICollectionElementKindSectionHeader) {
-        QFGroupModel *groupModel = [self groupModelAtSection:indexPath.section];
-        QFViewRenderBlock headerViewRenderBlock = groupModel.headerViewRenderBlock;
+        HGroupModel *groupModel = [self groupModelAtSection:indexPath.section];
+        HViewRenderBlock headerViewRenderBlock = groupModel.headerViewRenderBlock;
         if (headerViewRenderBlock) {
-            return headerViewRenderBlock(indexPath.section, (QFCollectionView *)collectionView);
+            return headerViewRenderBlock(indexPath.section, (HCollectionView *)collectionView);
         } else {
             return groupModel.headerView;
         }
@@ -123,22 +123,22 @@
     return nil;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    QFItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
-    QFItemSelectionBlock selectionBlock = itemModel.selectionBlock;
+    HItemModel *itemModel = [self itemModelAtIndexPath:indexPath];
+    HItemSelectionBlock selectionBlock = itemModel.selectionBlock;
     if (selectionBlock) {
-        selectionBlock(indexPath, (QFCollectionView *)collectionView);
+        selectionBlock(indexPath, (HCollectionView *)collectionView);
     }
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    QFGroupModel *groupModel = [self groupModelAtSection:section];
+    HGroupModel *groupModel = [self groupModelAtSection:section];
     return groupModel.rowInterval;
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    QFGroupModel *groupModel = [self groupModelAtSection:section];
+    HGroupModel *groupModel = [self groupModelAtSection:section];
     return groupModel.colInterval;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    QFGroupModel *groupModel = [self groupModelAtSection:section];
+    HGroupModel *groupModel = [self groupModelAtSection:section];
     return UIEdgeInsetsMake(groupModel.marginTop, groupModel.marginX, 0, groupModel.marginX);
 }
 

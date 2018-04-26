@@ -1,19 +1,19 @@
 //
-//  QFGroupModel.h
-//  QFCollectionProject
+//  HGroupModel.h
+//  HCollectionProject
 //
 //  Created by dqf on 2018/3/30.
 //  Copyright © 2018年 dqfStudio. All rights reserved.
 //
 
-#import "QFItemModel.h"
+#import "HItemModel.h"
 
-@class QFCollectionView;
+@class HCollectionView;
 
-typedef UICollectionReusableView *(^QFViewRenderBlock)(NSInteger section, QFCollectionView *collection);
-typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *collection);
+typedef UICollectionReusableView *(^HViewRenderBlock)(NSInteger section, HCollectionView *collection);
+typedef CGSize (^HHeaderViewSizeBlock)(NSInteger section, HCollectionView *collection);
 
-@interface QFGroupModel : NSObject
+@interface HGroupModel : NSObject
 
 #pragma -mark 允许外部设置
 @property (nonatomic, assign) CGFloat rowInterval;  // optional
@@ -26,10 +26,10 @@ typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *col
 @property (nonatomic, assign) CGFloat whFactor;     // =h/w,默认1
 @property (nonatomic, assign) CGFloat height;       // 设置item的固定高度，与whFactor只能二选一，优先级高于whFactor
 
-@property (nonatomic, copy) QFHeaderViewSizeBlock headerSizeBlock;            // optional
+@property (nonatomic, copy) HHeaderViewSizeBlock headerSizeBlock;            // optional
 
-@property (nonatomic, copy) QFViewRenderBlock headerViewRenderBlock;  // block to render header view
-//@property (nonatomic, copy) QFViewRenderBlock footerViewRenderBlock;  // block to render footer view
+@property (nonatomic, copy) HViewRenderBlock headerViewRenderBlock;  // block to render header view
+//@property (nonatomic, copy) HViewRenderBlock footerViewRenderBlock;  // block to render footer view
 @property (nonatomic, strong) UICollectionReusableView *headerView;  // section header view
 //@property (nonatomic, strong) UICollectionReusableView *footerView;  // section footer view
 
@@ -37,11 +37,11 @@ typedef CGSize (^QFHeaderViewSizeBlock)(NSInteger section, QFCollectionView *col
 @property (nonatomic, strong) NSString *selector;  //section对应的selector
 
 //向model添加对象数据
-- (void)addModel:(QFItemModel *)anObject;
+- (void)addModel:(HItemModel *)anObject;
 
-- (QFItemModel *)itemAtIndex:(NSUInteger)index;
+- (HItemModel *)itemAtIndex:(NSUInteger)index;
 
-- (NSUInteger)indexOfItem:(QFItemModel *)anObject;
+- (NSUInteger)indexOfItem:(HItemModel *)anObject;
 
 - (NSUInteger)items;
 

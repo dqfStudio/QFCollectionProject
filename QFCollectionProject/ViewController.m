@@ -43,22 +43,26 @@
                      @"groupModel2<1>itemModel2",
                      @"groupModel2<1>itemModel2"];
     
-    NSArray *arr2 = @[@"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel",
-                     @"itemModel"];
+//    NSArray *arr2 = @[@"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel",
+//                     @"itemModel"];
     
-    NSArray *arr3 = @[@"itemModel2",
-                     @"itemModel2",
-                     @"itemModel2",
-                     @"itemModel2",
-                     @"itemModel2",
-                     @"itemModel2"];
+    NSArray *arr2 = @"itemModel".multiple(9);
+    
+//    NSArray *arr3 = @[@"itemModel2",
+//                     @"itemModel2",
+//                     @"itemModel2",
+//                     @"itemModel2",
+//                     @"itemModel2",
+//                     @"itemModel2"];
+    
+    NSArray *arr3 = @"itemModel2".multiple(6);
     
     arr2.setGroupModel(0, @"groupModel");
     arr3.setGroupModel(1, @"groupModel2");

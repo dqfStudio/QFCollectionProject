@@ -57,3 +57,7 @@ typedef void(^HItemInitBlock)(id cell);
 - (NSArray *(^)(NSArray *))linkItem;
 - (void (^)(NSUInteger group, NSString *groupModel))setGroupModel;
 @end
+
+@interface NSString (HCollectionView)
+- (NSArray *(^)(NSUInteger))multiple;
+@end

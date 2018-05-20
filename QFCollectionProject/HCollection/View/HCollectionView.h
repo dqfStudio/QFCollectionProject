@@ -19,7 +19,7 @@ typedef void(^HItemInitBlock)(id cell);
 
 @interface HCollectionView : UICollectionView
 
-@property (nonatomic, strong) NSMutableArray *allReuseCells;
+@property (nonatomic, strong) NSMutableSet *allReuseCells;
 
 @property (nonatomic, assign) NSUInteger pageNo;    // page number, default 1
 @property (nonatomic, assign) NSUInteger pageSize;  // page size, default 20

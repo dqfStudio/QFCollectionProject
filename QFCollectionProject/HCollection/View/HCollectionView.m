@@ -45,7 +45,7 @@
         self.collectionModel = [[HCollectionModel alloc] init];
         self.delegate = self.collectionModel;
         self.dataSource = self.collectionModel;
-        self.allReuseCells = [[NSMutableArray alloc] init];
+        self.allReuseCells = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -65,6 +65,7 @@
     UICollectionViewCell *cell = nil;
     if (reuseIdentifier.length > 0) {
         if (![self.allReuseCells containsObject:reuseIdentifier]) {
+            [self.allReuseCells addObject:reuseIdentifier];
             [self registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
             if (block) {

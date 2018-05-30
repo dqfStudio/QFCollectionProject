@@ -12,7 +12,7 @@
 @class HCollectionView;
 
 typedef CGSize (^HItemSizeBlock)(NSIndexPath *indexPath, HCollectionView *collection);
-typedef UICollectionViewCell * (^HItemRenderBlock)(NSIndexPath *indexPath, HCollectionView *collection);
+typedef UICollectionViewCell *(^HItemRenderBlock)(NSIndexPath *indexPath, HCollectionView *collection);
 typedef void (^HItemSelectionBlock)(NSIndexPath *indexPath, HCollectionView *collection);
 
 @interface HItemModel : NSObject

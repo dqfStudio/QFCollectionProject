@@ -11,6 +11,7 @@
 #import "HCollectionModel.h"
 #import "HGroupModel.h"
 #import "UICollectionViewLeftAlignedLayout.h"
+#import "HBaseItem.h"
 #import "MJRefresh.h"
 
 typedef void (^HRefreshBlock)(void);

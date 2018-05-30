@@ -68,6 +68,12 @@
             [self.allReuseCells addObject:reuseIdentifier];
             [self registerClass:cellClass forCellWithReuseIdentifier:reuseIdentifier];
             cell = [self dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+            if ([cell respondsToSelector:@selector(model)]) {
+                HBaseItem *baseItem = (HBaseItem *)cell;
+                baseItem.collection = self;
+                baseItem.indexPath = indexPath;
+                baseItem.model = [self itemAtIndexPath:indexPath];
+            }
             if (block) {
                 block(cell);
             }
